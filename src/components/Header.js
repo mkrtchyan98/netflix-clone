@@ -18,9 +18,10 @@ class Header extends Component {
 			</div>	
 			{/*header Content */}	
 			<div className="header-content">
-			<Title>Unlimited movies, TV <br/> shows, and more.</Title>
+			<Title>Unlimited movies, TV 
+		     shows, and more.</Title>
 			<SubTitle>Watch anywhere.Cancel anytime</SubTitle>
-			<Link className="main-offer-btn">try it now
+			<Link className="main-offer-btn"><span>try it now</span>
 			<Icon className="icon-svg" icon ={ic_keyboard_arrow_right} size={37}/>
 			</Link>
 			</div>
@@ -42,21 +43,26 @@ const Logo = styled.img `
 width:10rem;
 height:3.5rem;
 position:absolute;
-top:25%;
-left:50%;
+top:-5%;
+left:10%;
 transform:translate(-50%,-50%);
 margin-left:0;
 ${customMedia.lessThan('tablet')`
 left:20%;
+width:30%;
+top:-10%;
+
 `}
 `;
 
 
 // Header 
 const HeaderComponent = styled.div`
+	  	border-bottom:8px solid #222;
+	  	padding:70px 45px;
 .signIn-btn {
 	right:0;
-	margin:1.125rem 3% 0;
+	top: -20%;
 	padding:0.4375rem 1.0625rem;
 	font-weight: 400;
 	line-height:normal;
@@ -71,8 +77,8 @@ const HeaderComponent = styled.div`
  background: var(--main-red-hover);
 	}
 	${customMedia.lessThan('smtablet')`
-	margin-top: 1.25rem;
-	right:5%;
+	right:-10%;
+	margin-top:-15px;
 	`}
 }
 //Header-top
@@ -96,6 +102,8 @@ const HeaderComponent = styled.div`
 	display:grid;
 	grid-template-coloumns: repeat(3,60px);
 	margin-top: 8rem;
+	width:100%;
+	padding-bottom:60px;
 	`}
 }
 //Main offer btn
@@ -108,7 +116,7 @@ const HeaderComponent = styled.div`
 	margin 0 33%;
 	padding:1.5rem;
 	border-radius:0.1875rem;
-	font-size:2rem;
+	font-size:1.8rem;
 	text-align:center;
 	box-shadow:0 1px 0 rgba(0,0,0,0.45);
 	transition:background 0.2s ease-in;
@@ -127,6 +135,7 @@ const HeaderComponent = styled.div`
 	${customMedia.lessThan('tablet')`
 	margin: 0 20%;
 	font-size: 1.3rem;
+	padding:0 1em;
 	`}
 }
 .icon-svg {
@@ -137,6 +146,11 @@ const HeaderComponent = styled.div`
 	font-size: 1.3rem;
 
 	`}
+	${customMedia.lessThan('tablet')`
+display:none !important;
+	font-size: 1.3rem;
+
+`}
 }
 
 `;
@@ -148,7 +162,7 @@ font-weight:700;
 font-size:3.125rem;
 line-height:1.1;
 ${customMedia.lessThan('tablet')`
-	font-size: 2.6rem;
+	font-size: 1.625rem;
 	`}
 `;
 
@@ -162,7 +176,7 @@ line-height:1.25rem;
 margin:0 0 1.875rem;
 ${customMedia.lessThan('smtablet')`
 	margin:0;
-	font-size: 1.4rem;
-
+	font-size: 1.125rem;
+	padding-bottom:20px;
 	`}
 `

@@ -22,11 +22,12 @@ class Footer extends Component {
 			 <li>
 			   <Link>Cookie Preferences</Link>
 			 </li>
+			 
+			 </ul>
+			 <ul>
 			  <li>
 			   <Link>Speed Test</Link>
 			 </li>
-			 </ul>
-			 <ul>
 			 <li>
 			   <Link>Help Center</Link>
 			 </li>
@@ -36,21 +37,25 @@ class Footer extends Component {
 			 <li>
 			   <Link>Terms of Use</Link>
 			 </li>
-			 <li>
+			
+			 </ul>
+			  <ul>
+			   <li>
 			   <Link> Corporate Information</Link>
 			 </li>
 			  <li>
 			   <Link>Legal Notices</Link>
 			 </li>
-			 </ul>
-			  <ul>
 			 <li>
 			   <Link>Account </Link>
 			 </li>
 			 <li>
 			   <Link> Jobs </Link>
 			 </li>
-			 <li>
+			 
+			 </ul>
+			 <ul>
+			  <li>
 			   <Link>  Privacy</Link>
 			 </li>
 			 <li>
@@ -60,7 +65,6 @@ class Footer extends Component {
 			   <Link> Netflix Originals</Link>
 			 </li>
 			 </ul>
-			 
 			 </div>
 			 <span className="lang">
 			 Netflix Armenia
