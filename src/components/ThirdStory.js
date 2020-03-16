@@ -31,7 +31,10 @@ const useStyles = makeStyles(theme =>({
 
     '& video' : {
       width: '100%',
-      height:'100%'
+      height:'100%',
+         [theme.breakpoints.down('sm')]: {
+          display:'none',
+    },
     }
   },
   videoContainer: {
