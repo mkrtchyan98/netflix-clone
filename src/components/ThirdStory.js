@@ -69,7 +69,7 @@ const classes = useStyles();
         <Grid item sm={6} xs={12} className={classes.animationContainer}>
 <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/device-pile.png" alt="mobile" />
 <div className={classes.videoContainer}>
-<video autoplay="" muted="" playsinline="" loop="" >
+<video autoplay="autoplay"   loop="loop" muted >
 <source src=" https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-devices.m4v" type="video/mp4" />
 </video>
 </div>
