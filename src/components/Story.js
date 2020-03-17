@@ -38,10 +38,10 @@ const useStyles = makeStyles(theme =>({
   videoContainer: {
   	width:'100%',
   	height:'100%',
-  	maxWidth:'76%',
+  	maxWidth:'73%',
   	maxHeight:'54%',
   	position:'absolute',
-  	top:'46%',
+  	top:'36%',
   	left:'50%',
   	transform:'translate(-50%,-50%)',
   },
