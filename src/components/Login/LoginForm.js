@@ -3,21 +3,21 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import FBlogo from '../../images/fb-logo.png';
 import { generateMedia } from 'styled-media-query';
-
+/*
 const regexp = RegExp(/^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/)
-
+*/
 const initState = {
 	checked: false,
-	email:'',
+	/*email:'',
 	password:'',
 	emailError:'',
-	passwordError:''
+	passwordError:''*/
 }
 
 class LoginForm extends Component {
 	state = initState;
 
-	handleEmailChange = e => {
+	/*handleEmailChange = e => {
 		this.setState=({
 			email:e.target.value
 		});
@@ -64,7 +64,7 @@ class LoginForm extends Component {
 			this.setState(initState);
 		}
 	}
-
+*/
 	handlerCheckbox = e => {
 		this.setState({
 			checked: e.target.checked
@@ -85,10 +85,8 @@ class LoginForm extends Component {
 		 	 : 'input-empty' 
 		 	}
 		  type="email" 
-		  onChange={this.handleEmailChange}
-		  required value={this.state.email}/>
+		  required />
 		<label>Email or Phone Number</label>
-		<span  style={{color: '#db7302'}}>{this.state.emailError}</span>
 		</div>
 		<div className="input-container">
 		<input
@@ -98,13 +96,11 @@ class LoginForm extends Component {
 		 	 : 'input-empty' 
 		 	}
 		  type="password"
-		  onChange={this.handlePasswordChange}
-		   required value={this.state.password}/>
+		   required />
 		<label>Password</label>
-				<span style={{color: '#db7302'}}>{this.state.passwordError}</span>
 		</div>
 		<div className="input-container">
-		<Button type="submit" onClick={e => this.onSubmit(e)}>Sign In</Button>
+		<Button type="submit">Sign In</Button>
 		</div>
 		<label className="checkbox-container">
 		Remember me
