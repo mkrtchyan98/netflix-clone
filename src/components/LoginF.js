@@ -73,11 +73,17 @@ class LoginForm extends Component {
 
 	render() {
 		return (
-			<FormContainer>
+			<Grid
+  container
+  direction="columns"
+  justify="center"
+  alignItems="center"
+  className={classes.root}
+>
 		<div className="form-container">
 		<form>
 		<h1>Sign In</h1>
-		<div className="input-container">
+ <Grid item sm={4} xs={4}  >
 		<input
 		 className={
 		 	this.state.emailError 
@@ -89,8 +95,8 @@ class LoginForm extends Component {
 		  required value={this.state.email}/>
 		<label>Email or Phone Number</label>
 		<span  style={{color: '#db7302'}}>{this.state.emailError}</span>
-		</div>
-		<div className="input-container">
+		</Grid>
+ <Grid item sm={4} xs={4}  >
 		<input
 		className={
 		 	this.state.emailError 
@@ -102,10 +108,10 @@ class LoginForm extends Component {
 		   required value={this.state.password}/>
 		<label>Password</label>
 				<span style={{color: '#db7302'}}>{this.state.passwordError}</span>
-		</div>
-		<div className="input-container">
+		</Grid>
+ <Grid item sm={4} xs={4}  >
 		<Button type="submit" onClick={e => this.onSubmit(e)}>Sign In</Button>
-		</div>
+		</Grid>
 		<label className="checkbox-container">
 		Remember me
 		<input type="checkbox" defaultChecked={this.state.checked} onChange={this.handlerCheckbox}/>
@@ -126,7 +132,7 @@ class LoginForm extends Component {
 		</div>
 		</form>
 		</div>
-			</FormContainer>
+			</Grid>
 			)
 	}
 }
@@ -155,6 +161,7 @@ border-bottom:1px solid #999;
 	height: 41.25rem;
 	padding: 4rem;
 	${customMedia.lessThan('tablet')`
+padding:0.6rem;
 height:35rem;
 	`}
 }

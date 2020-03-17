@@ -40,17 +40,10 @@ const customMedia = generateMedia({
 
 //Logo
 const Logo = styled.img `
-width:10rem;
-height:3.5rem;
-position:absolute;
-top:-5%;
-left:10%;
-transform:translate(-50%,-50%);
-margin-left:0;
+width:134px;
+height:36px;
+padding-top:0.5rem
 ${customMedia.lessThan('tablet')`
-left:20%;
-width:30%;
-top:-10%;
 
 `}
 `;
@@ -61,24 +54,22 @@ const HeaderComponent = styled.div`
 	  	border-bottom:8px solid #222;
 	  	padding:70px 45px;
 .signIn-btn {
-	right:0;
-	top: -20%;
-	padding:0.4375rem 1.0625rem;
+	float:right;
+	padding:7px 17px;
 	font-weight: 400;
 	line-height:normal;
 	border-radius:0.1875rem;
 	font-size: 1rem;
 	background: var(--main-red);
-	position: absolute;
 	translate: transform(-50%,-50%);
 	cursor:pointer;
 	transition:background 0.2s ease-in;
+	margin-top:-2px;
 	&:hover {
  background: var(--main-red-hover);
 	}
 	${customMedia.lessThan('smtablet')`
-	right:-10%;
-	margin-top:-15px;
+	
 	`}
 }
 //Header-top
