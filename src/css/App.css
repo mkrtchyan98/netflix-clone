@@ -15,8 +15,7 @@
 body{
   font-family: "Helvetica";
   -webkit-font-smoothing:antialised;
-  background: var(--main-dark);
-  color: #fff;
+
   overflow-x: hidden;
 }
 
