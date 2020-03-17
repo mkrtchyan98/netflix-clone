@@ -32,8 +32,9 @@ const useStyles = makeStyles(theme =>({
     '& video' : {
       width: '100%',
       height:'100%',
+       display:'inline-block',
          [theme.breakpoints.down('sm')]: {
-          display:'none',
+        
     },
     }
   },
@@ -72,7 +73,7 @@ const classes = useStyles();
         <Grid item sm={6} xs={12} className={classes.animationContainer}>
 <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/device-pile.png" alt="mobile" />
 <div className={classes.videoContainer}>
-<video autoplay="autoplay"   loop="loop" muted >
+<video autoplay="autoplay"   loop="loop"  playsinline muted >
 <source src=" https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-devices.m4v" type="video/mp4" />
 </video>
 </div>

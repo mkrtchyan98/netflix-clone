@@ -4,13 +4,14 @@ import styled from 'styled-components';
 import LoginForm from '../components/Login/LoginForm';
 import LoginFooter from '../components/Login/LoginFooter';
 import { generateMedia } from 'styled-media-query';
+import { Link } from 'react-router-dom';
 
 class Login extends Component {
 	render() {
 		return (
 			<div className="main-login-container">
 			<div className="header-top">
-			<Logo src={logo} alt="logo" className="logo" />
+			<Link to="/"><Logo src={logo} alt="logo" className="logo" /></Link>
 			</div>		
 			<LoginForm />
 			<LoginFooter />
