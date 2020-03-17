@@ -55,9 +55,10 @@ overflow:'none'
   }
 
 }));
+
+
  function ThirdStory() {
 const classes = useStyles();
-
 		return (
 <Grid
   container
@@ -73,7 +74,7 @@ const classes = useStyles();
         <Grid item sm={6} xs={12} className={classes.animationContainer}>
 <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/device-pile.png" alt="mobile" />
 <div className={classes.videoContainer}>
-<video autoplay="autoplay"   loop="loop"  playsinline muted >
+<video autoplay="autoplay"   loop="loop" playsinline="true" >
 <source src=" https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-devices.m4v" type="video/mp4" />
 </video>
 </div>

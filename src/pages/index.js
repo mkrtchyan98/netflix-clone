@@ -6,6 +6,7 @@ import SecondStory from '../components/SecondStory';
 import ThirdStory from '../components/ThirdStory';
 class Main extends Component {
 	render() {
+		
 		return (
 			<div>
 			<Header />

@@ -52,9 +52,14 @@ overflow:'none'
   }
 
 }));
+
+
 export function Story() {
 const classes = useStyles();
-
+window.onload = function () {
+    var element = document.getElementById('video');
+    element.muted = "muted";
+}
 		return (
 <Grid
   container
@@ -70,7 +75,7 @@ const classes = useStyles();
         <Grid item sm={6} xs={12} className={classes.animationContainer}>
 <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png" alt="tv" />
 <div className={classes.videoContainer}>
-<video autoplay="autoplay"   loop="loop" playsinline muted >
+<video id="video" autoplay="autoplay"   loop="loop" playsinline="true" muted="muted" >
 <source src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv.m4v" type="video/mp4" />
 </video>
 </div>
