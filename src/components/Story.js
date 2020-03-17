@@ -41,7 +41,7 @@ const useStyles = makeStyles(theme =>({
   	maxWidth:'73%',
   	maxHeight:'54%',
   	position:'absolute',
-  	top:'27%',
+  	top:'26%',
   	left:'50%',
   	transform:'translate(-50%,-50%)',
   },
