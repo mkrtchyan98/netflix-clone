@@ -32,6 +32,16 @@ const useStyles = makeStyles(theme =>({
       height:'100%',
       display:'inline-block',
         [theme.breakpoints.down('sm')]: {
+          videoContainer: {
+    width:'100%',
+    height:'100%',
+    maxWidth:'73%',
+    maxHeight:'54%',
+    position:'absolute',
+    top:'26%',
+    left:'50%',
+    transform:'translate(-50%,-50%)',
+  }
     },
     }
   },
@@ -41,7 +51,7 @@ const useStyles = makeStyles(theme =>({
   	maxWidth:'73%',
   	maxHeight:'54%',
   	position:'absolute',
-  	top:'26%',
+  	top:'46%',
   	left:'50%',
   	transform:'translate(-50%,-50%)',
   },

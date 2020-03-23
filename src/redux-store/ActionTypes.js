@@ -1,0 +1,3 @@
+export const ADD_MOVIE_DETAILS = "ADD_MOVIE_DETAILS";
+export const ADD_POPULAR_MOVIES = "ADD_POPULAR_MOVIES";
+export const SET_SEARCH = "SET_SEARCH";
