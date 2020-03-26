@@ -31,30 +31,30 @@ const useStyles = makeStyles(theme =>({
       width: '100%',
       height:'100%',
       display:'inline-block',
-        [theme.breakpoints.down('sm')]: {
-          videoContainer: {
+    }
+  },
+  videoContainer: {
     width:'100%',
     height:'100%',
     maxWidth:'73%',
     maxHeight:'54%',
     position:'absolute',
-    top:'26%',
+    top:'46%',
+    left:'50%',
+    transform:'translate(-50%,-50%)',
+      [theme.breakpoints.down('sm')]: {
+    width:'100%',
+    height:'100%',
+    maxWidth:'73%',
+    maxHeight:'54%',
+    position:'absolute',
+    top:'12%',
     left:'50%',
     transform:'translate(-50%,-50%)',
   }
-    },
-    }
+    
   },
-  videoContainer: {
-  	width:'100%',
-  	height:'100%',
-  	maxWidth:'73%',
-  	maxHeight:'54%',
-  	position:'absolute',
-  	top:'46%',
-  	left:'50%',
-  	transform:'translate(-50%,-50%)',
-  },
+
   animationContainer: {
 position:'relative',
 overflow:'none'

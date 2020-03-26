@@ -33,8 +33,27 @@ const useStyles = makeStyles(theme =>({
       width: '100%',
       height:'100%',
        display:'inline-block',
-         [theme.breakpoints.down('sm')]: {
-         videoContainer: {
+       
+    },
+    
+  },
+
+  animationContainer: {
+position:'relative',
+overflow:'none'
+
+  },
+
+   videoContainer: {
+    width:'100%',
+    height:'100%',
+    maxWidth:'63%',
+    maxHeight:'47%',
+    position:'absolute',
+    top:'34%',
+    left:'50%',
+    transform:'translate(-50%,-50%)',
+      [theme.breakpoints.down('sm')]: {
     width:'100%',
     height:'100%',
     maxWidth:'63%',
@@ -44,24 +63,8 @@ const useStyles = makeStyles(theme =>({
     left:'50%',
     transform:'translate(-50%,-50%)',
   }
-    },
-    }
+    
   },
-  videoContainer: {
-  	width:'100%',
-  	height:'100%',
-  	maxWidth:'63%',
-  	maxHeight:'47%',
-  	position:'absolute',
-  	top:'34%',
-  	left:'50%',
-  	transform:'translate(-50%,-50%)',
-  },
-  animationContainer: {
-position:'relative',
-overflow:'none'
-
-  }
 
 }));
 
