@@ -15,13 +15,13 @@ class Header extends Component {
 			<div className="header-top">
 		<Logo src={logo} alt="logo"/>
 		<NavLink className="signIn-btn" to="/login" >Sign In</NavLink>
+
 			</div>	
-			{/*header Content */}	
 			<div className="header-content">
 			<Title>Unlimited movies, TV 
 		     shows, and more.</Title>
 			<SubTitle>Watch anywhere.Cancel anytime</SubTitle>
-			<Link className="main-offer-btn"><span>try it now</span>
+			<Link className="main-offer-btn" to="/movies"><span>try it now</span>
 			<Icon className="icon-svg" icon ={ic_keyboard_arrow_right} size={37}/>
 			</Link>
 			</div>

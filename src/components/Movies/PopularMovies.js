@@ -1,66 +1,50 @@
 import React from 'react';
 import styled from 'styled-components';
 import MovieCard from './MovieCard';
-import { Link } from 'react-router-dom';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import { connect } from 'react-redux';
+import { generateMedia } from 'styled-media-query';
 import {
+  getAPIGenres,
   getAPIPopularMovies
 } from '../../redux-store/ActionCreators';
 
-const Gallery = styled.div`
-  max-width: 1300px;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-`;
-const Header = styled.header`
-  & h1 {
-    font-size: 50px;
-    color: darkblue;
-  }
-  text-align: center;
-  font-family: 'Inconsolata', monospace;
-  margin: 20px auto;
-  max-width: 1200px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  @media (max-width: 700px) {
-    flex-direction: column;
-  }
-`;
+
 
 class PopularMovies extends React.Component {
+  fetchMorePopularMovies = this.fetchMorePopularMovies.bind(this);
+
+  fetchMorePopularMovies() {
+    this.props.getAPIPopularMovies(this.props.page);
+  }
 
   componentDidMount() {
-    this.props.getAPIPopularMovies();
+    if (this.props.allGenres.length) return;
+    this.fetchMorePopularMovies();
+    this.props.getAPIGenres();
   }
 
   render() {
-    
+    if (!this.props.allGenres.length) {
+      return <h2>Loading...</h2>;
+    } else {
       return (
         <div className="content">
           <Header>
-            <Link to="/watchlist">Watch list</Link>
             <h1>Popular Movies</h1>
           </Header>
           <InfiniteScroll
             dataLength={this.props.popularMovies.length}
             next={this.fetchMorePopularMovies}
             hasMore={true}
-            //loader={<h4>Loading...</h4>}
+            loader={<h4>Loading...</h4>}
           >
             <Gallery>
               {this.props.popularMovies
-                .filter(movie =>
-                  movie.title
-                    .toUpperCase()
-                  
-                )
                 .map(movie => (
                   <MovieCard
                     key={movie.id}
+                    allGenres={this.props.allGenres}
                     movie={movie}
                   />
                 ))}
@@ -68,21 +52,64 @@ class PopularMovies extends React.Component {
           </InfiniteScroll>
         </div>
       );
-    
+    }
   }
 }
 const mapStateToProps = state => {
   return {
-    popularMovies: state.moviesList,
+    allGenres: state.allGenres,
+    popularMovies: state.popularMovies,
+    page: state.page
   };
 };
 const mapDispatchToProps = dispatch => ({
 
-  getAPIPopularMovies() {
-    dispatch(getAPIPopularMovies());
+  getAPIGenres() {
+    dispatch(getAPIGenres());
+  },
+  getAPIPopularMovies(page) {
+    dispatch(getAPIPopularMovies(page));
   }
 });
 export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(PopularMovies);
+
+const customMedia = generateMedia({
+  smtablet:'740px'
+})
+
+const Gallery = styled.div`
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  .back-btn {
+  float:right;
+  padding:7px 17px;
+  font-weight: 400;
+  line-height:normal;
+  border-radius:0.1875rem;
+  font-size: 1rem;
+  background: var(--main-red);
+  translate: transform(-50%,-50%);
+  cursor:pointer;
+  transition:background 0.2s ease-in;
+  margin-top:-2px;
+  &:hover {
+ background: var(--main-red-hover);
+  }
+}
+`;
+const Header = styled.header`
+   h1 {
+    font-size: 50px;
+    color: red;
+    text-align:center;
+     ${customMedia.lessThan('smtablet')`
+font-size:25px;
+
+  `}
+  }
+`;
