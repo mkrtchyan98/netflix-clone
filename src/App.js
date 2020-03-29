@@ -12,7 +12,7 @@ function App() {
     <Switch>
     <Route exact path="/" component={Main}/>
       <Route path="/login" component={Login}/>
-      <Route path="/movies"render={() => <PopularMovies />}/>
+      <Route path="/movies" component={PopularMovies}/>
       <Route path="/movie/:id" render={props => <MovieInfoPage id={props.match.params.id} />}/>
 
                 </Switch>
